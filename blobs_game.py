@@ -17,8 +17,8 @@ def draw_environment(blobs):
     game_display.fill(WHITE)
     for blob in blobs:
         pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
+        blob.move()
     pygame.display.update()
-    blob.move()
 
 def main():
     blue_blobs = [Blob(BLUE) for i in range(STARTING_BLUE_BLOBS)]
