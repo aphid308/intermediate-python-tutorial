@@ -16,7 +16,7 @@ clock = pygame.time.Clock()
 def draw_environment(blobs):
     game_display.fill(WHITE)
     for blob in blobs:
-        pygame.draw_circle(game_display, blob.color, [blob.x, blob.y], blob.size)
+        pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
     pygame.display.update()
     blob.move()
 
