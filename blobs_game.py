@@ -17,7 +17,7 @@ def draw_environment():
 
 def main():
     while True:
-        for even in pygame.event.get():
+        for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
