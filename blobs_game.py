@@ -13,7 +13,7 @@ game_display = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Blob World')
 clock = pygame.time.Clock()
 
-def draw_environment(blob):
+def draw_environment(blobs):
     game_display.fill(WHITE)
     for blob in blobs:
         pygame.draw_circle(game_display, blob.color, [blob.x, blob.y], blob.size)
