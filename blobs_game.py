@@ -15,6 +15,7 @@ def draw_environment(blob):
     game_display.fill(WHITE)
     pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
     pygame.display.update()
+    blob.move()
 
 def main():
     red_blob = Blob(RED)
