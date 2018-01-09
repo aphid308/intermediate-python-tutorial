@@ -27,3 +27,12 @@ class Blob:
         if self.y < 0: self.y = 0
         elif self.y > self.y_boundary: self.y = self.y_boundary
 
+class BlueBlob(Blob):
+
+    def __init__(self, color, x_boundary, y_boundary):
+        super().__init__(color, x_boundary, y_boundary)
+        self.color = BLUE
+
+    def move_fast(self):
+        self.x += random.randrange(-5,5)
+        self.y += random.randrange(-5,5)

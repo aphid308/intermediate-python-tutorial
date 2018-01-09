@@ -1,5 +1,6 @@
 import pygame
 from blob import Blob
+from blob import BlueBlob
 
 WIDTH = 800
 HEIGHT = 600
@@ -19,12 +20,13 @@ def draw_environment(blob_list):
         for blob_id in blob_dict:
             blob = blob_dict[blob_id]
             pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
-            blob.move()
+            blob.move_fast()
+            blob.check_bounds()
     pygame.display.update()
 
 def main():
-    blue_blobs = dict(enumerate([Blob(BLUE,WIDTH,HEIGHT) for i in range(STARTING_BLUE_BLOBS)]))
-    red_blobs = dict(enumerate([Blob(RED,WIDTH,HEIGHT) for i in range(STARTING_RED_BLOBS)]))
+    blue_blobs = dict(enumerate([BlueBlob(BLUE,WIDTH,HEIGHT) for i in range(STARTING_BLUE_BLOBS)]))
+    red_blobs = dict(enumerate([BlueBlob(RED,WIDTH,HEIGHT) for i in range(STARTING_RED_BLOBS)]))
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
