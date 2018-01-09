@@ -1,4 +1,5 @@
 import pygame
+import random
 from blob import Blob
 
 WIDTH = 800
