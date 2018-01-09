@@ -1,6 +1,5 @@
 import pygame
 from blob import Blob
-from blob import BlueBlob
 
 WIDTH = 800
 HEIGHT = 600
@@ -36,6 +35,16 @@ def main():
         draw_environment([blue_blobs, red_blobs])
         clock.tick(60)
 
+
+class BlueBlob(Blob):
+
+    def __init__(self, color, x_boundary, y_boundary):
+        super().__init__(color, x_boundary, y_boundary)
+        self.color = BLUE
+
+    def move_fast(self):
+        self.x += random.randrange(-5,5)
+        self.y += random.randrange(-5,5)
 
 
 if __name__ == '__main__':
