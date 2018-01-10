@@ -8,9 +8,9 @@ HEIGHT = 600
 WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 RED = (255, 0, 0)
-STARTING_BLUE_BLOBS = 10
-STARTING_RED_BLOBS = 3
-STARTING_GREEN_BLOBS = 5
+STARTING_BLUE_BLOBS = 20
+STARTING_RED_BLOBS = 32
+STARTING_GREEN_BLOBS = 15
 
 game_display = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Blob World')
