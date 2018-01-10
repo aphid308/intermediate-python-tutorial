@@ -66,20 +66,20 @@ def main():
     red_blobs = dict(enumerate([RedBlob(WIDTH,HEIGHT) for i in range(STARTING_RED_BLOBS)]))
     green_blobs = dict(enumerate([GreenBlob(WIDTH,HEIGHT) for i in range(STARTING_GREEN_BLOBS)]))
 
-    print('Current blue size: {}. Current red size: {}'.format(str(blue_blobs[0].size),
-                                                               str(red_blobs[0].size)))
+    #print('Current blue size: {}. Current red size: {}'.format(str(blue_blobs[0].size),
+    #                                                           str(red_blobs[0].size)))
 
-    blue_blobs[0] + red_blobs[0]
-    print('Current blue size: {}. Current red size: {}'.format(str(blue_blobs[0].size),
-                                                               str(red_blobs[0].size)))
-    #while True:
-    #    for event in pygame.event.get():
-    #        if event.type == pygame.QUIT:
-    #            pygame.quit()
-    #            quit()
+    #blue_blobs[0] + red_blobs[0]
+    #print('Current blue size: {}. Current red size: {}'.format(str(blue_blobs[0].size),
+    #                                                           str(red_blobs[0].size)))
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
 
-    #    draw_environment([blue_blobs, red_blobs, green_blobs])
-    #    clock.tick(60)
+        draw_environment([blue_blobs, red_blobs, green_blobs])
+        clock.tick(60)
 
 
 if __name__ == '__main__':
