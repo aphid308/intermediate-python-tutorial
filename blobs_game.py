@@ -2,6 +2,9 @@ import pygame
 import random
 from blob import Blob
 import numpy as np
+import logging
+
+logging.basicConfig(filename='logfile.log', level=logging.INFO)
 
 WIDTH = 800
 HEIGHT = 600
@@ -22,6 +25,7 @@ class BlueBlob(Blob):
         Blob.__init__(self, (0, 0, 255), x_boundary, y_boundary)
 
     def __add__(self, other_blob):
+        logging.info('Blob add op: {} + {}'.format(str(self.color), str(other_blob.color)))
         if other_blob.color == (255, 0, 0):
             self.size  -= other_blob.size
             other_blob.size -= self.size
