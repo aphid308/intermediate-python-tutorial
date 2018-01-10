@@ -76,6 +76,7 @@ def handle_collisions(blob_list):
     for blue_id, blue_blob in blues.copy().items():
         for other_blobs in blues, reds, greens:
             for other_blob_id, other_blob in other_blobs.copy().items():
+                logging.debug('Checking if blobs touching {} + {}'.format(str(blue_blob.color), str(other_blob.color)))
                 if blue_blob == other_blob:
                     pass
                 else:
