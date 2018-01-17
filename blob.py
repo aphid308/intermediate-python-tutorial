@@ -29,4 +29,14 @@ class Blob:
         if self.y < 0: self.y = 0
         elif self.y > self.y_boundary: self.y = self.y_boundary
 
+    def __repr__(self):
+        return 'Blob({}, {}, ({}, {}))'.format(self.color,
+                                               self.size,
+                                               self.x,
+                                               self.y)
 
+    def __str__(self):
+        return "Color: {} blobobject of size {}. Located at {},{}".format(self.color,
+                                                                          self.size,
+                                                                          self.x,
+                                                                          self.y)
